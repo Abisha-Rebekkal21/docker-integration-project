@@ -6,8 +6,12 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Hello from Docker App 🚀" });
 });
 
+// app.get("/api/test", (req, res) => {
+//   res.status(200).json({ success: true });
+// });
+
 app.get("/api/test", (req, res) => {
-  res.status(200).json({ success: true });
+  res.status(500).json({ success: false });
 });
 
 const PORT = 3000;
