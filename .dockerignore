@@ -1,7 +1,5 @@
 node_modules
 tests/node_modules
-npm-debug.log
 .git
 .gitignore
-Dockerfile
-docker-compose.yml
+npm-debug.log

@@ -6,7 +6,7 @@ pipeline {
             steps {
                 bat 'docker-compose up --build --abort-on-container-exit'
             }
-        }
+    }
 
         stage('Cleanup') {
             steps {
