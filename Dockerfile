@@ -7,6 +7,8 @@ RUN npm install
 
 COPY app/ .
 
+USER root
+
 EXPOSE 3000
 
 CMD ["npm", "start"]
