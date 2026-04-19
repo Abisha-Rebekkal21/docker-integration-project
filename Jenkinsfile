@@ -2,16 +2,21 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Abisha-Rebekkal21/docker-integration-project.git'
+            }
+        }
 
         stage('Build & Test') {
             steps {
-                sh 'docker-compose up --build --abort-on-container-exit'
+                bat 'docker-compose up --build'
             }
         }
 
         stage('Cleanup') {
             steps {
-                sh 'docker-compose down'
+                bat 'docker-compose down'
             }
         }
     }
