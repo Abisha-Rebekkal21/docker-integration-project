@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build & Test') {
             steps {
-                bat 'docker-compose up --build'
+                bat 'docker-compose up --build --abort-on-container-exit'
             }
         }
 
