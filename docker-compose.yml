@@ -10,14 +10,9 @@ services:
       - test-network
 
   test:
-    build: .
-    container_name: test
-    working_dir: /tests
-    depends_on:
-      - app
-    networks:
-      - test-network
-    command: sh -c "cd tests && npm install && npm test"
+  build: .
+  working_dir: /app
+  command: sh -c "npm install --prefix tests && npm test --prefix tests"
 
 networks:
   test-network:
